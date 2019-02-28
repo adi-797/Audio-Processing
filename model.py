@@ -40,22 +40,22 @@ def Instrument_detect(fs, sound):
 
 
     # Removes the unnecessary features from the set.
-    collist.remove('bandwidth-var')
-    collist.remove('cqt-var')
-    collist.remove('flatness-mean')
-    collist.remove('flatness-var')
-    collist.remove('flux-var')
-    collist.remove('zcr-mean')
-    collist.remove('zcr-var')
-    collist.remove('tonal-centroid-mean')
-    collist.remove('tonal-centroid-var')
-    collist.remove('spectral-centroid-var')
-    collist.remove('rolloff-var')
-    collist.remove('rms-mean')
-    collist.remove('rms-var')
-    collist.remove('mfcc-var-3')
-    collist.remove('flux-mean')
-    collist.remove('cqt-mean')
+    # collist.remove('bandwidth-var')
+    # collist.remove('cqt-var')
+    # collist.remove('flatness-mean')
+    # collist.remove('flatness-var')
+    # collist.remove('flux-var')
+    # collist.remove('zcr-mean')
+    # collist.remove('zcr-var')
+    # collist.remove('tonal-centroid-mean')
+    # collist.remove('tonal-centroid-var')
+    # collist.remove('spectral-centroid-var')
+    # collist.remove('rolloff-var')
+    # collist.remove('rms-mean')
+    # collist.remove('rms-var')
+    # collist.remove('mfcc-var-3')
+    # collist.remove('flux-mean')
+    # collist.remove('cqt-mean')
 
     # Creates the vector for prediction.
     X = np.array(df[collist])
@@ -130,22 +130,22 @@ def Instrument_detect(fs, sound):
     # Extracts all the features and removes the un necessary ones
     feature_set = extract_features(sound, fs)
     
-    del feature_set['bandwidth-var']
-    del feature_set['cqt-var']
-    del feature_set['flatness-mean']
-    del feature_set['flatness-var']
-    del feature_set['flux-var']
-    del feature_set['zcr-mean']
-    del feature_set['zcr-var']
-    del feature_set['flux-mean']
-    del feature_set['rms-var']
-    del feature_set['rms-mean']
-    del feature_set['cqt-mean']
-    del feature_set['mfcc-var-3']
-    del feature_set['tonal-centroid-mean']
-    del feature_set['tonal-centroid-var']
-    del feature_set['spectral-centroid-var']
-    del feature_set['rolloff-var'] 
+    # del feature_set['bandwidth-var']
+    # del feature_set['cqt-var']
+    # del feature_set['flatness-mean']
+    # del feature_set['flatness-var']
+    # del feature_set['flux-var']
+    # del feature_set['zcr-mean']
+    # del feature_set['zcr-var']
+    # del feature_set['flux-mean']
+    # del feature_set['rms-var']
+    # del feature_set['rms-mean']
+    # del feature_set['cqt-mean']
+    # del feature_set['mfcc-var-3']
+    # del feature_set['tonal-centroid-mean']
+    # del feature_set['tonal-centroid-var']
+    # del feature_set['spectral-centroid-var']
+    # del feature_set['rolloff-var'] 
 
     testing_vars = np.array(feature_set.values())
 
